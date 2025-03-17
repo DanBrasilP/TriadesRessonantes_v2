@@ -1,0 +1,64 @@
+# Simulação 1: Oscilações da Ressonância do Meio Rígido
+import numpy as np
+import matplotlib.pyplot as plt
+
+L = 10
+Nx = 200
+Nt = 500
+dx = L / Nx
+dt = 0.01
+omega = 2 * np.pi
+alpha = 0.1
+
+x = np.linspace(-L/2, L/2, Nx)
+t = np.linspace(0, Nt*dt, Nt)
+M_ressonante = np.zeros((Nt, Nx))
+
+for i in range(Nt):
+    M_ressonante[i, :] = 1 + alpha * np.sin(omega * t[i]) * np.exp(-x**2 / 4)
+
+plt.imshow(M_ressonante, extent=[-L/2, L/2, 0, Nt*dt], aspect='auto', cmap='viridis')
+plt.colorbar(label='M_ressonante')
+plt.xlabel('Posição')
+plt.ylabel('Tempo')
+plt.title('Oscilações da ressonância do meio rígido')
+plt.show()
+
+
+# Simulação 2: Propagação da Luz Modificada pela Ressonância do Meio
+c0 = 1.0
+wavelength = 1.0
+wave_propagation = np.zeros((Nt, Nx))
+
+for i in range(1, Nt):
+    for j in range(1, Nx - 1):
+        c_local = c0 * M_ressonante[i, j]
+        wave_propagation[i, j] = 2 * wave_propagation[i-1, j] - wave_propagation[i-2, j] + \
+                                 (c_local**2 * dt**2 / dx**2) * (wave_propagation[i-1, j+1] - 2 * wave_propagation[i-1, j] + wave_propagation[i-1, j-1])
+
+plt.imshow(wave_propagation, extent=[-L/2, L/2, 0, Nt*dt], aspect='auto', cmap='plasma')
+plt.colorbar(label='Intensidade do feixe de luz')
+plt.xlabel('Posição')
+plt.ylabel('Tempo')
+plt.title('Propagação da luz modificada pela ressonância do meio rígido')
+plt.show()
+
+
+# Simulação 3: Modulação da Gravidade pela Ressonância
+G = 1.0
+M = 10.0
+r_min, r_max = 0.5, 5.0
+Nr = 100
+r = np.linspace(r_min, r_max, Nr)
+
+F_grav_classica = G * M / r**2
+F_grav_ressonante = F_grav_classica * (1 + alpha * np.sin(omega * r))
+
+plt.plot(r, F_grav_classica, label="Gravidade Clássica (Newton)", linestyle="dashed", color="black")
+plt.plot(r, F_grav_ressonante, label="Gravidade Modificada pela Ressonância", color="red")
+plt.xlabel("Distância (r)")
+plt.ylabel("Força Gravitacional (F)")
+plt.title("Modulação da Gravidade pela Ressonância do Meio Rígido")
+plt.legend()
+plt.grid()
+plt.show()
