@@ -42,8 +42,4 @@ TriadesRessonantes_v2
 ## 📜 Licença
 Este projeto está licenciado sob a **Licença Pública Geral GNU v3 (GPLv3)**, garantindo que o conhecimento permaneça aberto e colaborativo.
 
-## 📩 Contato
-- **Autor:** Danilo Brasileiro Passos
-- **E-mail:** danilobpassos@gmail.com
-
 Caso tenha interesse em validar, refutar ou expandir esta teoria, entre em contato ou contribua diretamente com o projeto! 🚀
