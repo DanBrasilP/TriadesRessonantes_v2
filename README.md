@@ -7,7 +7,7 @@ A teoria sugere que as interações do universo emergem de oscilações ressonan
 
 O desenvolvimento da teoria contou com interações com inteligências artificiais, **Grok** e **ChatGPT**. A interação entre **ChatGPT e Grok** possibilitou um avanço significativo na formulação e documentação da teoria. Enquanto o **Grok** auxiliou na modelagem e desenvolvimento matemático, o **ChatGPT** ajudou a organizar e refinar o material, além de fornecer ideias inovadoras, garantindo que o conteúdo ficasse mais estruturado para avaliação e colaboração científica. 
 
-Entretanto, o processo envolveu muitas iterações e erros, pois lidar com grande quantidade de material e análises pode levar à **saturação cognitiva**. O esforço contínuo para revisar e aprimorar a teoria visa garantir sua coerência e testabilidade, tornando-a acessível para discussão e validação pela comunidade científica.
+Entretanto, o processo envolveu muitas iterações e erros, pois lidar com grande quantidade de material e análises pode levar à **saturação cognitiva** para IAs. O esforço contínuo para revisar e aprimorar a teoria visa garantir sua coerência e testabilidade, tornando-a acessível para discussão e validação pela comunidade científica. O material está sendo revisao aos poucos.
 
 ## 🔬 Principais Conceitos
 - **Oscilações Ressonantes**: Modelagem das forças fundamentais como interações ressonantes entre tríades de campos.
@@ -24,9 +24,7 @@ TriadesRessonantes_v2
 │   ├── Expansoes Complementar.md
 │   ├── Expansoes Complementar_v3.md
 │   ├── Extras.md
-│   ├── Revalidação em 50 Degrais.md
 │   ├── Triades Ressonantes.md
-│   └── Validação em 46 Degrais.md
 ├── README.md
 └── simulacoes
     └── Simulações.txt
